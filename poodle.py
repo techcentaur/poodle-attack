@@ -204,10 +204,10 @@ if __name__ == '__main__':
         data = bytes(str(sys.argv[1]), 'utf-8')
     except:
         data = bytes('Cryptography Assignment 3 by Ankit', 'utf-8')
-    print("[?] Secret data: ", data.decode())   
+    print("[?] Secret data: ", data)   
     
     attack = Attack(Poodle(data))
     encoded_data = attack.poodle.client()
     
     dec = attack.perform_attack(encoded_data)
-    print("[$] Decrypted data: ", dec.decode('utf-8'))
+    print("[$] Decrypted data: ", dec)
