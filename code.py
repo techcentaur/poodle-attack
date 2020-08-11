@@ -8,6 +8,7 @@ class SSLv3:
     def __init__(self, b_length=16):
         self.b_length = b_length
         self.cipher_key = SSLv3.get_random_bytes(16)
+    
     def padding(self, data):
         rem = len(data) % self.b_length
         return data + SSLv3.get_random_bytes(self.b_length-rem-1) + bytes([self.b_length-rem-1])
