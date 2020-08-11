@@ -196,14 +196,14 @@ class Poodle:
 
 if __name__ == '__main__':
     '''if data is given by CLI use it else use the harcoded one'''
-    
+
     import sys
     
     data = None
     try:
         data = bytes(str(sys.argv[1]), 'utf-8')
     except:
-        data = bytes('This is Cryptography Assignment 3', 'utf-8')
+        data = bytes('Cryptography Assignment 3 by Ankit', 'utf-8')
     print("[?] Secret data: ", data.decode())   
     
     attack = Attack(Poodle(data))
